@@ -1,0 +1,97 @@
+<div class="bootstrap-wrapper">
+
+    <div class="container">
+
+        <div class="row" style="margin-top: 20px;">
+
+            <div class="col-md-6 offset-md-3">
+                <mat-card>
+                <div class="container text-center">
+                    <img src="../../../assets/CodeXG.png" alt="" class="">
+                </div>
+
+                <h1 class="text-center"> Signup Here !! </h1>
+                <form (ngSubmit)="formSubmit()">
+                    <!-- Username Field -->
+                    <mat-form-field class="full-width" appearance="outline">
+                        <mat-label>Enter your User Name</mat-label>
+                        <input 
+                            required
+                            [(ngModel)]="user.username" 
+                            name="username"
+                            matInput placeholder="Enter here">
+                        <mat-hint>Please enter username unique !!</mat-hint>
+                      </mat-form-field>                    
+
+                    <!-- Password Field -->
+                    <mat-form-field class="full-width" appearance="outline">
+                        <mat-label>Enter your Password</mat-label>
+                        <input 
+                            required
+                            [(ngModel)]="user.password" 
+                            name="password"
+                            type="password" matInput placeholder="Enter here">
+                        <!-- <mat-hint>Hint</mat-hint> -->
+                      </mat-form-field>                    
+
+                      <!-- FirstName Field -->
+                    <mat-form-field class="full-width" appearance="outline">
+                        <mat-label>Enter your First Name</mat-label>
+                        <input 
+                        required
+                        [(ngModel)]="user.firstname" 
+                        name="firstname"
+                        matInput placeholder="Enter here">
+                        <!-- <mat-hint>Hint</mat-hint> -->
+                      </mat-form-field>                    
+
+
+                      <!-- LastName Field -->
+                    <mat-form-field class="full-width" appearance="outline">
+                        <mat-label>Enter your Last Name</mat-label>
+                        <input  
+                        required
+                            [(ngModel)]="user.lastname" 
+                            name="lastname"
+                            matInput placeholder="Enter here">
+                        <!-- <mat-hint>Hint</mat-hint> -->
+                      </mat-form-field>                    
+
+
+                      <!-- Email Field -->
+                    <mat-form-field class="full-width" appearance="outline">
+                        <mat-label>Enter your Email</mat-label>
+                        <input 
+                        required
+                            [(ngModel)]="user.email" 
+                            name="email"
+                            type="email" matInput placeholder="Enter here">
+                        <!-- <mat-hint>Hint</mat-hint> -->
+                      </mat-form-field>                    
+
+                      <!-- Phone Field -->
+                    <mat-form-field class="full-width" appearance="outline">
+                        <mat-label>Enter your Phone</mat-label>
+                        <input
+                        required
+                            [(ngModel)]="user.phone" 
+                            name="phone" 
+                            type="number" matInput placeholder="Enter here">
+                        <!-- <mat-hint>Hint</mat-hint> -->
+                      </mat-form-field>                                      
+                      <hr>
+                    <div class="container text-center">
+                        <button type="submit" mat-raised-button color="primary">Sign Up</button>
+                        <button type="reset" style="margin-left: 20px;" mat-raised-button color="accent">Reset</button>
+                    </div>
+                    
+                </form>
+                </mat-card> 
+
+            </div>
+
+        </div>
+
+    </div>
+
+</div>
