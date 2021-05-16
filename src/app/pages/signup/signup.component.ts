@@ -44,9 +44,17 @@ export class SignupComponent implements OnInit {
   //add user service
     this.userService.addUser(this.user).subscribe(
       (data:any)=>{
+        debugger
         console.log(data);
        // alert('SuccessFully')
-       Swal.fire('Successfully Registered','You user id : '+data.id,'success')
+       if(data.message !=null){
+
+       Swal.fire('Please check','Already exist : '+data.message,'warning')
+       }else{
+        Swal.fire('Successfully Registered','You user id : '+data.id,'success')
+       }
+       
+
       },(error)=>{
         console.log(error);
         // alert('something went wrong')
