@@ -24,6 +24,8 @@ import { UserDashboardComponent } from './pages/user/user-dashboard/user-dashboa
 import { ProfilesComponent } from './pages/profiles/profiles.component';
 import {MatListModule} from '@angular/material/list';
 import { SidebarComponent } from './pages/admin/sidebar/sidebar.component';
+import { WelcomeComponent } from './pages/admin/welcome/welcome.component';
+import {MatTableModule} from '@angular/material/table';
 
 
 @NgModule({
@@ -37,7 +39,8 @@ import { SidebarComponent } from './pages/admin/sidebar/sidebar.component';
     DashboardComponent,
     UserDashboardComponent,
     ProfilesComponent,
-    SidebarComponent
+    SidebarComponent,
+    WelcomeComponent
   ],
   imports: [
     BrowserModule,
@@ -53,6 +56,8 @@ import { SidebarComponent } from './pages/admin/sidebar/sidebar.component';
     MatToolbarModule,
     MatIconModule,
     MatListModule,
+    MatTableModule,
+    
   ],
   providers: [authInterceptorProviders],
   bootstrap: [AppComponent]
