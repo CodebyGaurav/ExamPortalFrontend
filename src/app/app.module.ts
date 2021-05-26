@@ -26,7 +26,8 @@ import {MatListModule} from '@angular/material/list';
 import { SidebarComponent } from './pages/admin/sidebar/sidebar.component';
 import { WelcomeComponent } from './pages/admin/welcome/welcome.component';
 import {MatTableModule} from '@angular/material/table';
-
+import { ViewCategoriesComponent } from './pages/admin/view-categories/view-categories.component';
+import { AddCategoriesComponent } from './pages/admin/add-categories/add-categories.component';
 
 @NgModule({
   declarations: [
@@ -40,7 +41,9 @@ import {MatTableModule} from '@angular/material/table';
     UserDashboardComponent,
     ProfilesComponent,
     SidebarComponent,
-    WelcomeComponent
+    WelcomeComponent,
+    ViewCategoriesComponent,
+    AddCategoriesComponent,
   ],
   imports: [
     BrowserModule,

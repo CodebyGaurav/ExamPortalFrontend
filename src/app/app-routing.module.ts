@@ -1,6 +1,8 @@
 import { NgModule } from '@angular/core';
 import { Routes, RouterModule } from '@angular/router';
+import { AddCategoriesComponent } from './pages/admin/add-categories/add-categories.component';
 import { DashboardComponent } from './pages/admin/dashboard/dashboard.component';
+import { ViewCategoriesComponent } from './pages/admin/view-categories/view-categories.component';
 import { WelcomeComponent } from './pages/admin/welcome/welcome.component';
 import { HomeComponent } from './pages/home/home.component';
 import { LoginComponent } from './pages/login/login.component';
@@ -22,6 +24,7 @@ const routes: Routes = [
   {
     path:'login', component: LoginComponent, pathMatch:'full'
   },
+  //Admin Panel
   {
     path:'admin', component: DashboardComponent, canActivate:[AdminGuard],
     children:[
@@ -30,6 +33,12 @@ const routes: Routes = [
       },
       {
          path: 'profile', component: ProfilesComponent 
+      },
+      {
+        path:'categories', component:ViewCategoriesComponent
+      },
+      {
+        path:'add-category', component:AddCategoriesComponent
       },
     ],
   },
