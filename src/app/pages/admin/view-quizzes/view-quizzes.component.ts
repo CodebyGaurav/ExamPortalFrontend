@@ -24,8 +24,29 @@ export class ViewQuizzesComponent implements OnInit {
         Swal.fire('Error !!','Error in loading data !', 'error')
       }
       )
-        
-    
   }
+
+  deleteQuiz(qid){
+    Swal.fire({
+      icon:'info',
+      title:'Are you sure ? ',
+      confirmButtonText : 'Delete',
+      showCancelButton:true,
+    }).then((result)=>{
+      if (result.isConfirmed) {
+        this._quiz.deleteQuiz(qid).subscribe(
+          (data)=>{
+            this.quizzes = this.quizzes.filter((quiz)=>quiz.qid!=qid)
+            Swal.fire('Success','Quiz deleted','success');
+          },(error)=>{
+            Swal.fire('Error !!','Error in deleting quiz','error'); 
+          }
+        )
+      }
+    })
+
+  }
+
+  
 
 }

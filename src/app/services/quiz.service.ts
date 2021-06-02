@@ -16,4 +16,18 @@ export class QuizService {
 
     return this._http.get(`${environment.baseUrl}/quiz/`);
   }
+
+  /**
+   * addQuiz 
+   */
+  public addQuiz(quiz) {
+    return this._http.post(`${environment.baseUrl}/quiz/`,quiz);
+  }
+  
+  /**
+   * deleteQuiz
+   */
+  public deleteQuiz(qId) {
+    return this._http.delete(`${environment.baseUrl}/quiz/${qId}`);    
+  }
 }
