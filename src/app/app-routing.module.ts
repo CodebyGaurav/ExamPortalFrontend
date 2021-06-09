@@ -1,10 +1,12 @@
 import { NgModule } from '@angular/core';
 import { Routes, RouterModule } from '@angular/router';
 import { AddCategoriesComponent } from './pages/admin/add-categories/add-categories.component';
+import { AddQuestionComponent } from './pages/admin/add-question/add-question.component';
 import { AddQuizComponent } from './pages/admin/add-quiz/add-quiz.component';
 import { DashboardComponent } from './pages/admin/dashboard/dashboard.component';
 import { UpdateQuizComponent } from './pages/admin/update-quiz/update-quiz.component';
 import { ViewCategoriesComponent } from './pages/admin/view-categories/view-categories.component';
+import { ViewQuizQuestionsComponent } from './pages/admin/view-quiz-questions/view-quiz-questions.component';
 import { ViewQuizzesComponent } from './pages/admin/view-quizzes/view-quizzes.component';
 import { WelcomeComponent } from './pages/admin/welcome/welcome.component';
 import { HomeComponent } from './pages/home/home.component';
@@ -51,6 +53,12 @@ const routes: Routes = [
       },
       {
         path:'quiz/:qid', component:UpdateQuizComponent
+      },
+      {
+        path:'view-questions/:qid/:title', component:ViewQuizQuestionsComponent
+      },
+      {
+        path:'add-question/:qid/:title', component:AddQuestionComponent
       },
     ],
   },
