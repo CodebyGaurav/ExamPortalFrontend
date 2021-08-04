@@ -44,4 +44,28 @@ export class QuizService {
   public updateQuiz(quiz) {
     return this._http.put(`${environment.baseUrl}/quiz/`,quiz)
   }
+
+  /**
+   * getQuizzesOfCategory
+   */
+  public getQuizzesOfCategory(cid) {
+    return this._http.get(`${environment.baseUrl}/quiz/category/${cid}`)
+  }
+
+  /**
+   * getActiveQuizzes
+   */
+  public getActiveQuizzes() {
+    return this._http.get(`${environment.baseUrl}/quiz/active/`)
+  }
+
+  /**
+   * getActiveQuizzesOfCategory
+   */
+  public getActiveQuizzesOfCategory(cid) {
+    return this._http.get(`${environment.baseUrl}/quiz/category/active/${cid}`)
+  }
+
+
+
 }

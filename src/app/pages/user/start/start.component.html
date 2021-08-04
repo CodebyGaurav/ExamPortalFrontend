@@ -1,0 +1,50 @@
+<div class="bootstrap-wrapper">
+    <div class="container-fluid">
+        <div class="row">
+            <div class="col-md-2">
+                <!-- instructions -->
+            </div>
+            <div class="col-md-8">
+                <!-- questions -->
+                <ng-container *ngIf="questions">
+                    <h1 class="mt20">On Going Quiz {{questions[0].quiz.title}}</h1>
+                </ng-container>
+
+                <mat-card *ngFor="let q of questions; let i = index" class="mt10">
+                    <mat-card-content>
+                        <!-- Inner html show by using [innerHTML] attribute -->
+                        <p><b>Q.{{i+1}}</b> <span class="ml10" [innerHTML]="q.content"></span></p>
+                         
+                        <mat-divider></mat-divider>
+                        
+                        <div class="row mt20">
+                            <div class="col-md-6">
+                                <input type="radio" [value]="q.option1" [name]="i">{{q.option1}}
+                            </div>
+                            <div class="col-md-6">
+                                <input type="radio" [value]="q.option2" [name]="i">{{q.option2}}
+                            </div>
+                        </div>
+                        <br>
+                        <div class="row">
+                            <div class="col-md-6">
+                                <input type="radio" [value]="q.option3" [name]="i">{{q.option3}}
+                            </div>
+                            <div class="col-md-6">
+                                <input type="radio" [value]="q.option4" [name]="i">{{q.option4}}
+                            </div>
+                        </div>
+
+
+                    </mat-card-content>
+                </mat-card>
+                <div class="container text-center mt20 mb20">
+                    <button mat-raised-button color="primary" type="submit">Submit Quiz</button>
+                </div>
+            </div>
+            <div class="col-md-2">
+                <!-- progess -->
+            </div>
+        </div>
+    </div>
+</div>

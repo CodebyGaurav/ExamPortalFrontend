@@ -16,6 +16,12 @@ export class QuestionService {
     return this._http.get(`${environment.baseUrl}/question/quiz/all/${qId}`)
   }
 
+  /**
+   * getQuestionsofQuizForTest
+   */
+   public getQuestionsofQuizForTest(qId) {
+    return this._http.get(`${environment.baseUrl}/question/quiz/${qId}`)
+  }
 
   /**
    * addQuestion
@@ -31,5 +37,7 @@ export class QuestionService {
   public deleteQuestion(questionId) {
     return this._http.delete(`${environment.baseUrl}/question/${questionId}`)
   }
+
+
 
 }
