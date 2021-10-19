@@ -23,4 +23,12 @@ export class CategoryService {
   public addCategory(category) {
    return this._http.post(`${environment.baseUrl}/category/`,category); 
   }
+
+  /**
+   * deleteCategory
+   */
+  public deleteCategory(categoryId) {
+    return this._http.delete(`${environment.baseUrl}/category/${categoryId}`)
+    
+  }
 }

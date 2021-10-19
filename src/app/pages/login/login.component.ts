@@ -47,6 +47,7 @@ export class LoginComponent implements OnInit {
       (data:any)=>{
         console.log('Success');
         Swal.fire('Successfully Login','You username : '+this.loginData.username ,'success')
+        
 
         console.log(data);
         //login......

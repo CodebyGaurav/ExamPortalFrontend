@@ -39,5 +39,11 @@ export class QuestionService {
   }
 
 
+  /**
+   * evalQuiz
+   */
+  public evalQuiz(questions) {
+    return this._http.post(`${environment.baseUrl}/question/eval-quiz`,questions)
+  }
 
 }

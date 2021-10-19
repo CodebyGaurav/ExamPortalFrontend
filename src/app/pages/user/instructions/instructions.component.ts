@@ -10,7 +10,7 @@ import Swal from 'sweetalert2';
 })
 export class InstructionsComponent implements OnInit {
   qid: any;
-  quiz;
+  quiz:any;
   constructor(
     private _route:ActivatedRoute,
     private _quiz:QuizService,
@@ -22,8 +22,8 @@ export class InstructionsComponent implements OnInit {
 
     this._quiz.getSingleQuiz(this.qid).subscribe(
       (data)=>{
-       // console.log(data);
         this.quiz=data;
+        console.log(this.quiz);
       },(error)=>{
         alert("error in loading quiz data");
         
